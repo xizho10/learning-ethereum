@@ -1,1 +1,1 @@
-# EthereumStudy
+# learning-ethereum
