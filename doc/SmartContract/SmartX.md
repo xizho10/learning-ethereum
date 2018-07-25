@@ -6,7 +6,7 @@
     - [1.1. 功能建议](#11-%E5%8A%9F%E8%83%BD%E5%BB%BA%E8%AE%AE)
         - [1.1.1. 支持HTTPS](#111-%E6%94%AF%E6%8C%81https)
         - [1.1.2. 支持沙箱运行环境](#112-%E6%94%AF%E6%8C%81%E6%B2%99%E7%AE%B1%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83)
-        - [支持Debug](#%E6%94%AF%E6%8C%81debug)
+        - [1.1.3. 支持Debug](#113-%E6%94%AF%E6%8C%81debug)
     - [1.2. 界面建议](#12-%E7%95%8C%E9%9D%A2%E5%BB%BA%E8%AE%AE)
         - [1.2.1. 优化日志显示](#121-%E4%BC%98%E5%8C%96%E6%97%A5%E5%BF%97%E6%98%BE%E7%A4%BA)
         - [1.2.2. 可调节的窗格](#122-%E5%8F%AF%E8%B0%83%E8%8A%82%E7%9A%84%E7%AA%97%E6%A0%BC)
@@ -47,19 +47,26 @@
 
 ![Alt text](../../img/SmartContract/Remix/RemixDeploy_1.png)
 
-### 支持Debug
+此外，开发者也可以利用`Remix`所提供的`Injected Provider`环境或者`Web3 Provider`环境，将智能合约部署到自己搭建的以太坊区块链、在本机内存中模拟的以太坊区块链、以太坊测试网络`Rinkeby`、以太坊测试网络`Ropsten`等更多的区块链网络中。
 
-`Remix`的定位是以太坊智能合约语言`solidity`的`IDE`，也相应地提供了`Debug`功能：
+![Alt text](../../img/SmartContract/Remix/RemixRunEnv_3.png)
+
+`SmartX`目前只支持在`ontology`的测试网部署智能合约，未来会支持主网，但这对于开发者来说选择仍然非常有限，也不便于进行智能合约的开发。
+
+### 1.1.3. 支持Debug
+
+`SmartX`的定位是本体网络上的一站式智能合约`IDE`，但目前缺少`IDE`所应该具有的`Debug`功能，只能执行简单的编译、部署、运行：
+
+![Alt text](../../img/SmartContract/SmartX/SmartxRun_1.png)
+
+
+`Remix`的定位是以太坊智能合约语言`solidity`的`IDE`，也相应地提供了`IDE`所应该具有的`Debug`功能：
 
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_1.png)
 
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_2.png)
 
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_3.png)
-
-`SmartX`的定位是本体网络上的一站式智能合约IDE，但目前缺少IDE所应该具有的`Debug`功能，只能执行简单的编译、部署、运行：
-
-![Alt text](../../img/SmartContract/SmartX/SmartxRun_1.png)
 
 ## 1.2. 界面建议
 
@@ -75,12 +82,12 @@
 
 ### 1.2.2. 可调节的窗格
 
+`SmartX`的窗格目前是固定的，在实际的智能合约开发过程中会带来不便：
+
+![Alt text](../../img/SmartContract/SmartX/SmartxLogs_1.png)
+
 `Remix`的窗格是可以调节的，在实际的智能合约开发过程中非常友好：
 
 ![Alt text](../../img/SmartContract/Remix/RmixResize_1.png)
 
 ![Alt text](../../img/SmartContract/Remix/RmixResize_2.png)
-
-`SmartX`的窗格目前是固定的，在实际的智能合约开发过充中会带来不便：
-
-![Alt text](../../img/SmartContract/SmartX/SmartxLogs_1.png)
