@@ -2,14 +2,15 @@
 
 <!-- TOC -->
 
-- [1. SmartX修改意见](#1-smartx%E4%BF%AE%E6%94%B9%E6%84%8F%E8%A7%81)
-    - [1.1. 功能建议](#11-%E5%8A%9F%E8%83%BD%E5%BB%BA%E8%AE%AE)
-        - [1.1.1. 支持HTTPS](#111-%E6%94%AF%E6%8C%81https)
-        - [1.1.2. 支持沙箱运行环境](#112-%E6%94%AF%E6%8C%81%E6%B2%99%E7%AE%B1%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83)
-        - [1.1.3. 支持Debug](#113-%E6%94%AF%E6%8C%81debug)
-    - [1.2. 界面建议](#12-%E7%95%8C%E9%9D%A2%E5%BB%BA%E8%AE%AE)
-        - [1.2.1. 优化日志显示](#121-%E4%BC%98%E5%8C%96%E6%97%A5%E5%BF%97%E6%98%BE%E7%A4%BA)
-        - [1.2.2. 可调节的窗格](#122-%E5%8F%AF%E8%B0%83%E8%8A%82%E7%9A%84%E7%AA%97%E6%A0%BC)
+- [1. SmartX修改意见](#1-smartx修改意见)
+    - [1.1. 功能建议](#11-功能建议)
+        - [1.1.1. 支持HTTPS](#111-支持https)
+        - [1.1.2. 支持沙箱运行环境](#112-支持沙箱运行环境)
+        - [1.1.3. 支持Debug](#113-支持debug)
+    - [1.2. 界面建议](#12-界面建议)
+        - [1.2.1. 优化日志显示](#121-优化日志显示)
+        - [1.2.2. 可调节的窗格](#122-可调节的窗格)
+        - [方法参数窗口中提供样例数据](#方法参数窗口中提供样例数据)
 
 <!-- /TOC -->
 
@@ -91,3 +92,19 @@
 ![Alt text](../../img/SmartContract/Remix/RmixResize_1.png)
 
 ![Alt text](../../img/SmartContract/Remix/RmixResize_2.png)
+
+### 方法参数窗口中提供样例数据
+
+`SmartX`的方法参数窗口中目前是显示参数的数据类型：
+
+![Alt text](../../img/SmartContract/SmartX/SmartxExec_1.png)
+
+实际上，窗口中的`Enter string`与左边的`String`已经重复了，可以参考`Ethereum Wallet`，将`Enter string`替换为示例数据，这样更加用户友好。
+
+`Ethereum Wallet`的方法参数窗口中显示的是数据类型的样例数据：
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_2.png)
+
+如下图所示，`Delegate`方法的参数数据类型为`Address`，而用户所需要输入的数据格式应为`0x123456…`。
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_3.png)

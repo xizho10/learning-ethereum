@@ -10,6 +10,84 @@
 
 ## 网络选择
 
-Ethereum Wallet支持将智能合约部署在**主网络**、**Ropsten测试网**、**Rinkeby测试网**：
+`Ethereum Wallet`支持将智能合约部署在**主网络**、**Ropsten测试网**、**Rinkeby测试网**：
 
 ![Alt text](../../img/SmartContract/EthereumWallet/Net_1.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/Net_2.png)
+
+## 部署智能合约
+
+`Ethereum Wallet`的智能合约部署界面，将编译与部署整合到了一个页面，整体比较美观：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_1.png)
+
+选择账户`Account1`，将合约粘贴进去，`Ethereum Wallet`便会自动编译合约，并进行错误提示：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_2.png)
+
+`Ethereum Wallet`提供了合约部署速率的选择进度条，能让用户方便地选择所期望的部署速率并自动计算出对应的`gas`:
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_3.png)
+
+部署确认窗口：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_4.png)
+
+输入密码确认交易：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_5.png)
+
+部署执行：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_6.png)
+
+执行完成，返回到主界面，在下方显示合约部署的实际进度：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_7.png)
+
+单击可查看合约的详细信息：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_8.png)
+
+获得了1次确认：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_9.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_10.png)
+
+获得了3次确认：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_11.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_12.png)
+
+获得了22次确认：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_13.png)
+
+在合约界面可以查看到已部署成功的合约：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_14.png)
+
+## 执行智能合约
+
+点击已部署的合约进入合约方法的执行页面：
+
+![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_14.png)
+
+从方法列表中选择想要执行的合约方法：
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_1.png)
+
+参数输入窗口中有样例数据：
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_2.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_3.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_4.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_5.png)
+
+![Alt text](../../img/SmartContract/EthereumWallet/ExecContract_6.png)

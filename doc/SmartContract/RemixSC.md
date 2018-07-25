@@ -27,6 +27,8 @@
 
 ## 1.3. 智能合约调试
 
+`Remix`支持设置断点、单步调试、后退执行等多种常用的调试功能：
+
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_1.png)
 
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_2.png)
@@ -34,10 +36,6 @@
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_3.png)
 
 ## 1.4. 智能合约运行
-
-![Alt text](../../img/SmartContract/Remix/RemixRunEnv_1.png)
-
-![Alt text](../../img/SmartContract/Remix/RemixRunEnv_2.png)
 
 `Remix`支持3种运行环境：
 
@@ -48,6 +46,10 @@
 - **Web3 Provider**: Remix will connect to a remote node. You will need to provide the URL address to the selected provider: geth, parity or any Ethereum client.
 
 > 资料来源：https://remix.readthedocs.io/en/latest/run_tab.html
+
+![Alt text](../../img/SmartContract/Remix/RemixRunEnv_1.png)
+
+![Alt text](../../img/SmartContract/Remix/RemixRunEnv_2.png)
 
 `Remix`提供`JavaScript VM`运行环境，支持在
 
