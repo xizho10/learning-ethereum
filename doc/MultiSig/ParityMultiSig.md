@@ -28,15 +28,15 @@
 
 个人认为Parity的界面并不美观。
 
-![Alt text](../../img/MultiSig/Parity_UI/parity_ui.png)
+![Alt text](../../img/MultiSig/ParityUI/parity_ui.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/parity_ui_accounts.png)
+![Alt text](../../img/MultiSig/ParityUI/parity_ui_accounts.png)
 
 ### 1.1.2. 助记词
 
 Parity的助记词只能逐一输入，体验不佳。对比来看，ONTO的助记词是在所给助记词中选择顺序，用户体验比较好。
 
-![Alt text](/../../img/MultiSig/Parity_UI/parity_owner_recovery_phrase.png)
+![Alt text](../../img/MultiSig/ParityUI/parity_owner_recovery_phrase.png)
 
 ## 1.2. 多重签名
 
@@ -56,7 +56,7 @@ Parity的多重签名基于智能合约`Wallet.sol`实现。
   - contract multisig
   - contract Wallet
 
-![Alt text](../../img/MultiSig/Parity_UI/wallel_sol_uml.png)
+![Alt text](../../img/MultiSig/ParityUI/wallel_sol_uml.png)
 
 #### 1.2.1.2. multiowned合约
 
@@ -112,124 +112,124 @@ function today()
 
 ### 1.2.2. 多签钱包的部署
 
-![Alt text](../../img/MultiSig/Parity_UI/parity_multisig_wallet.png)
+![Alt text](../../img/MultiSig/ParityUI/parity_multisig_wallet.png)
 
 在实际部署时，`Parity UI`中提供的智能合约编译器在`Kovan`测试网中一直无法加载出来，故最终使用了[Remix](https://remix.ethereum.org/)进行智能合约的编译。
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_1.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_1.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_2.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_2.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_3.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_3.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_4.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_4.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_5.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_5.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_6.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_6.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_7.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_7.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_deploy_8.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_deploy_8.png)
 
 ### 1.2.3. 多签钱包的使用
 
 #### 1.2.3.1. getOwner与isOwner的使用
 
-![Alt text](../../img/MultiSig/Parity_UI/get_owner_and_is_owner.png)
+![Alt text](../../img/MultiSig/ParityUI/get_owner_and_is_owner.png)
 
 #### 1.2.3.2. setDailyLimit
 
-![Alt text](../../img/MultiSig/Parity_UI/set_daily_limit_1.png)
+![Alt text](../../img/MultiSig/ParityUI/set_daily_limit_1.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/set_daily_limit_2.png)
+![Alt text](../../img/MultiSig/ParityUI/set_daily_limit_2.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/set_daily_limit_3.png)
+![Alt text](../../img/MultiSig/ParityUI/set_daily_limit_3.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/set_daily_limit_4.png)
+![Alt text](../../img/MultiSig/ParityUI/set_daily_limit_4.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/set_daily_limit_5.png)
+![Alt text](../../img/MultiSig/ParityUI/set_daily_limit_5.png)
 
 
 #### 1.2.3.3. 向多签钱包转账
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_1.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_1.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_2.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_2.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_3.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_3.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_4.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_4.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_5.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_5.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_6.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_6.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_7.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_7.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_8.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_8.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/transfer_9.png)
+![Alt text](../../img/MultiSig/ParityUI/transfer_9.png)
 
 #### 1.2.3.4. 更改多签方案
 
 将多签钱包更改为3-2多签钱包（`m_numOwners`：3，`m_required`：2）：
 
-![Alt text](../../img/MultiSig/Parity_UI/change_multisig_mode.png)
+![Alt text](../../img/MultiSig/ParityUI/change_multisig_mode.png)
 
 ## 1.3. 多签示例
 
 如图所示，多签钱包`GNOSIS`存在4个所有者：`MASK`、`ACCT`、`ACCT2`、`ACCT3`。
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_1.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_1.png)
 
 `MASK`向多签钱包`GNOSIS`转账：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_2.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_2.png)
 
 `Gas`相关设置：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_3.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_3.png)
 
 `MetaMask`确认交易：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_4.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_4.png)
 
 交易发送到网络中：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_5.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_5.png)
 
 交易显示为未执行：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_6.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_6.png)
 
 确认数为`1`：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_7.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_7.png)
 
 `MASK`钱包中查询到交易记录，但交易并未执行：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_8.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_8.png)
 
 发送交易：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_9.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_9.png)
 
 确认交易：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_10.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_10.png)
 
 交易被发送到网络中：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_11.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_11.png)
 
 交易被写入区块，确认数更新为2：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_12.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_12.png)
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_13.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_13.png)
 
 多签钱包余额更新为0.3ETH，交易显示为已执行：
 
-![Alt text](../../img/MultiSig/Parity_UI/multisig_example_14.png)
+![Alt text](../../img/MultiSig/ParityUI/multisig_example_14.png)
 
