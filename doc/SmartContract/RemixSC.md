@@ -29,6 +29,10 @@
 
 ![Alt text](../../img/SmartContract/Remix/RemixDebug_1.png)
 
+![Alt text](../../img/SmartContract/Remix/RemixDebug_2.png)
+
+![Alt text](../../img/SmartContract/Remix/RemixDebug_3.png)
+
 ## 1.4. 智能合约运行
 
 ![Alt text](../../img/SmartContract/Remix/RemixRunEnv_1.png)
