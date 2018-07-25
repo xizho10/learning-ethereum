@@ -57,4 +57,23 @@
 
 ## 1.5. 智能合约分析
 
+`Remix`在每次编译智能合约的时候都会自动对合约代码进行分析，从而避免一些错误。
+
 ![Alt text](../../img/SmartContract/Remix/RemixAnaly_1.png)
+
+> Here is the list of analyzers:
+> - Security: Transaction origin: Warns if tx.origin is used
+>   - Check effects: Avoid potential reentrancy bugs
+>   - Inline assembly: Use of Inline Assembly
+>   - Block timestamp: Semantics maybe unclear
+>   - Low level calls: Semantics maybe unclear
+>   - Block.blockhash usage: Semantics maybe unclear
+> - Gas & Economy:
+>   - Gas costs: Warns if the gas requirements of the functions are too high
+>   - This on local calls: Invocation of local functions via this
+> - Miscellaneous:
+>   - Constant functions: Checks for potentially constant functions
+>   - Similar variable names: Checks if variable names are too similar
+
+***
+> 资料来源：https://remix.readthedocs.io/en/latest/analysis_tab.html
