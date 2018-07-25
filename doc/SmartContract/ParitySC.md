@@ -2,18 +2,25 @@
 
 > https://www.parity.io/
 
-## 主界面
+## 1.1. 主界面
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_1.png)
 
-## 智能合约界面
+## 1.2. 智能合约界面
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_2.png)
 
 `Parity`提供`solidity`编译器，支持：
 
 - 可选编译器版本
-- 自动编译
+<!-- TOC -->
+
+- [1. 以太坊智能合约：Parity](#1-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%EF%BC%9Aparity)
+    - [1.1. 主界面](#11-%E4%B8%BB%E7%95%8C%E9%9D%A2)
+    - [1.2. 智能合约界面](#12-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%95%8C%E9%9D%A2)
+    - [1.3. 智能合约编译](#13-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%BC%96%E8%AF%91)
+
+<!-- /TOC -->
 - 代码优化
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_3.png)
@@ -24,7 +31,7 @@
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_6.png)
 
-## 智能合约编译
+## 1.3. 智能合约编译
 
 `Parity`支持对所用智能合约编译器的版本进行选择：
 

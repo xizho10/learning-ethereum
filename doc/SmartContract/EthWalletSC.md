@@ -2,13 +2,21 @@
 
 > https://github.com/ethereum/mist/releases/
 
-## 主界面
+## 1.1. 主界面
 
 ![Alt text](../../img/SmartContract/EthereumWallet/ContractUi_1.png)
 
-![Alt text](../../img/SmartContract/EthereumWallet/ContractUi_2.png)
+<!-- TOC -->
 
-## 网络选择
+- [1. 以太坊智能合约：Ethereum Wallet](#1-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%EF%BC%9Aethereum-wallet)
+    - [1.1. 主界面](#11-%E4%B8%BB%E7%95%8C%E9%9D%A2)
+    - [1.2. 网络选择](#12-%E7%BD%91%E7%BB%9C%E9%80%89%E6%8B%A9)
+    - [1.3. 部署智能合约](#13-%E9%83%A8%E7%BD%B2%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6)
+    - [1.4. 执行智能合约](#14-%E6%89%A7%E8%A1%8C%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6)
+
+<!-- /TOC -->
+
+## 1.2. 网络选择
 
 `Ethereum Wallet`支持将智能合约部署在**主网络**、**Ropsten测试网**、**Rinkeby测试网**：
 
@@ -16,7 +24,7 @@
 
 ![Alt text](../../img/SmartContract/EthereumWallet/Net_2.png)
 
-## 部署智能合约
+## 1.3. 部署智能合约
 
 `Ethereum Wallet`的智能合约部署界面，将编译与部署整合到了一个页面，整体比较美观：
 
@@ -70,7 +78,7 @@
 
 ![Alt text](../../img/SmartContract/EthereumWallet/DeployContract_14.png)
 
-## 执行智能合约
+## 1.4. 执行智能合约
 
 点击已部署的合约进入合约方法的执行页面：
 

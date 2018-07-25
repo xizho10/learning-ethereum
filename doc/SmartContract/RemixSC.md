@@ -51,7 +51,7 @@
 
 ![Alt text](../../img/SmartContract/Remix/RemixRunEnv_2.png)
 
-`Remix`提供`JavaScript VM`运行环境，支持在
+`Remix`提供`JavaScript VM`运行环境，能够使得所有的交易能够在浏览器中的沙箱区块链中被立即执行，对开发者非常友好。
 
 ![Alt text](../../img/SmartContract/Remix/RemixDeploy_1.png)
 
