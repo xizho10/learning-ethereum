@@ -10,7 +10,11 @@
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_2.png)
 
-Parity提供
+`Parity`提供`solidity`编译器，支持：
+
+- 可选编译器版本
+- 自动编译
+- 代码优化
 
 ![Alt text](../../img/SmartContract/Parity/ParityUI_3.png)
 
