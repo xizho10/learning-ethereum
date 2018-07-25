@@ -37,7 +37,9 @@
 
 ![Alt text](../../img/SmartContract/SmartX/SmartxLogs_2.png)
 
-![Alt text | @ontid | center](../../img/SmartContract/SmartX/SmartxLogs_3.png)
+可以看到，在`Request Payload`中，可以直接找到登陆所用的`ontid`与对应的`password`：
+
+![Alt text](../../img/SmartContract/SmartX/SmartxLogs_3.png)
 
 ### 1.1.2. 支持沙箱运行环境
 
