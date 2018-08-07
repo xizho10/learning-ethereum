@@ -12,8 +12,12 @@ Under the hood it communicates to a local node through `RPC calls`.
 
 在`web3`中：
 
-- `web3.eth`: 与Ethereum blockchain进行交互；
-- `web3.shh`: 基于Whisper协议（以太坊DApps之间的通信协议，一套p2p节点间的异步广播系统）进行交互；
+- `web3.eth`: 用于与Ethereum blockchain进行交互；
+- `web3.shh`: 用于进行基于Whisper协议（以太坊DApps之间的通信协议，一套p2p节点间的异步广播系统）的交互；
+- `web3.net`： 用于查询连接节点的网络信息；
+  - `web3.net.listening`：当前连接节点是否正在监听；
+  - `web3.net.peerCount`：当前连接节点上的以太坊节点数量；
+- `web3.db`: 用于与本地数据库进行交互；
 
 
 ## 密钥文件存储
