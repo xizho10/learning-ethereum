@@ -2,6 +2,8 @@
 
 > https://github.com/MetaMask/provider-engine
 
+A JavaScript library for composing Ethereum provider objects using middleware modules.
+
 ```js
 const ProviderEngine = require('web3-provider-engine')
 const CacheSubprovider = require('web3-provider-engine/subproviders/cache.js')
