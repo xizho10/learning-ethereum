@@ -103,6 +103,40 @@ console.log(balance.toNumber()); // 1000000000000
 
 Get the storage at a specific position of an address.
 
+***
+
+> 由于状态变量是存储在区块链上的，所以存储空间需要预先分配，但映射的存储值是可以动态增改的。因此，在以太坊的状态存储模型中，实际存储是以哈希键值对的方式实现的。
+
+> 其中，哈希是由键值和映射的存储槽位序号拼接后计算的哈希值（映射只占一个槽位序号），也就是说值是存到由keccak256(k . p)计算的哈希串里，这里的k表示的是映射要查找的键，p表示映射在整个合约中相对序号位置。
+
+```solidity
+pragma solidity ^0.4.0;
+
+contract MappingLayout{
+  //position: 0
+  mapping(string=>string) strMapping;
+
+  function setString() {
+      //"aaa" -> hex: "616161"
+      strMapping["aaa"] = "aaa";
+  }
+}
+```
+
+```js
+function(err, result){
+    var key = "616161"
+    var pos = "0000000000000000000000000000000000000000000000000000000000000000"
+    let hash = web3.sha3(key + pos, {"encoding":"hex"})
+
+    var state = web3.eth.getStorageAt(myContract.address, hash);
+    //0x6161610000000000000000000000000000000000000000000000000000000006
+    console.log(state);
+}
+```
+
+***
+
 ### Parameters
 
 1. `String` - The address to get the storage from.
