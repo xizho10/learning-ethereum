@@ -5,6 +5,30 @@
 <!-- TOC -->
 
 - [MetaMask Javascript API(Web3.js)](#metamask-javascript-apiweb3js)
+    - [web3.version.network](#web3versionnetwork)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.version.ethereum](#web3versionethereum)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.version.whisper](#web3versionwhisper)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.isConnected](#web3isconnected)
+        - [Parameters](#parameters)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.setProvider](#web3setprovider)
+        - [Parameters](#parameters)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.currentProvider](#web3currentprovider)
+        - [Returns](#returns)
+        - [Example](#example)
+    - [web3.reset](#web3reset)
+        - [Parameters](#parameters)
+        - [Returns](#returns)
+        - [Example](#example)
     - [web3.eth.getBalance](#web3ethgetbalance)
         - [Parameters](#parameters)
         - [Returns](#returns)
@@ -67,6 +91,160 @@
         - [Example](#example)
 
 <!-- /TOC -->
+
+## web3.version.network
+
+    web3.version.network
+    // or async
+    web3.version.getNetwork(callback(error, result){ ... })
+
+
+### Returns
+
+`String` - The network protocol version.
+
+### Example
+
+```js
+var version = web3.version.network;
+console.log(version); // 54
+```
+
+***
+
+## web3.version.ethereum
+
+    web3.version.ethereum
+    // or async
+    web3.version.getEthereum(callback(error, result){ ... })
+
+
+### Returns
+
+`String` - The ethereum protocol version.
+
+### Example
+
+```js
+var version = web3.version.ethereum;
+console.log(version); // 60
+```
+
+***
+
+## web3.version.whisper
+
+    web3.version.whisper
+    // or async
+    web3.version.getWhisper(callback(error, result){ ... })
+
+
+### Returns
+
+`String` - The whisper protocol version.
+
+### Example
+
+```js
+var version = web3.version.whisper;
+console.log(version); // 20
+```
+
+***
+
+## web3.isConnected
+
+    web3.isConnected()
+
+Should be called to check if a connection to a node exists
+
+### Parameters
+none
+
+### Returns
+
+`Boolean`
+
+### Example
+
+```js
+if(!web3.isConnected()) {
+  
+   // show some dialog to ask the user to start a node
+
+} else {
+ 
+   // start web3 filters, calls, etc
+  
+}
+```
+
+***
+
+## web3.setProvider
+
+    web3.setProvider(provider)
+
+Should be called to set provider.
+
+### Parameters
+none
+
+### Returns
+
+`undefined`
+
+### Example
+
+```js
+web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545')); // 8080 for cpp/AZ, 8545 for go/mist
+```
+
+***
+
+## web3.currentProvider
+
+    web3.currentProvider
+
+Will contain the current provider, if one is set. This can be used to check if mist etc. has set already a provider.
+
+
+### Returns
+
+`Object` - The provider set or `null`;
+
+### Example
+
+```js
+// Check if mist etc. already set a provider
+if(!web3.currentProvider)
+    web3.setProvider(new web3.providers.HttpProvider("http://localhost:8545"));
+
+```
+
+***
+
+## web3.reset
+
+    web3.reset(keepIsSyncing)
+
+Should be called to reset state of web3. Resets everything except manager. Uninstalls all filters. Stops polling.
+
+### Parameters
+
+1. `Boolean` - If `true` it will uninstall all filters, but will keep the [web3.eth.isSyncing()](#web3ethissyncing) polls
+
+### Returns
+
+`undefined`
+
+### Example
+
+```js
+web3.reset();
+```
+
+***
 
 ## web3.eth.getBalance
 
