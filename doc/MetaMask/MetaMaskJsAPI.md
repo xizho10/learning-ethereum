@@ -8,6 +8,7 @@
     - [使用示例](#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
         - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
         - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
+    - [MetaMask RPC设置](#metamask-rpc%E8%AE%BE%E7%BD%AE)
     - [常用接口](#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3)
         - [web3.version.network](#web3versionnetwork)
             - [Returns](#returns)
@@ -116,6 +117,10 @@ web3.net.getPeerCount(function(error, result){
 ```
 
 ![Alt text](../../img/MetaMask/async_call.png)
+
+## MetaMask RPC设置
+
+![Alt text](../../img/MetaMask/new_rpc.png)
 
 ## 常用接口
 
