@@ -7,91 +7,92 @@
 - [MetaMask Javascript API(Web3.js)](#metamask-javascript-apiweb3js)
     - [使用示例](#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
         - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
-    - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
-    - [web3.version.network](#web3versionnetwork)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.version.ethereum](#web3versionethereum)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.version.whisper](#web3versionwhisper)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.isConnected](#web3isconnected)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.setProvider](#web3setprovider)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.currentProvider](#web3currentprovider)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.reset](#web3reset)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getBalance](#web3ethgetbalance)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getStorageAt](#web3ethgetstorageat)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getCode](#web3ethgetcode)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getBlock](#web3ethgetblock)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getBlockTransactionCount](#web3ethgetblocktransactioncount)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getUncle](#web3ethgetuncle)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getTransaction](#web3ethgettransaction)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getTransactionFromBlock](#web3ethgettransactionfromblock)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getTransactionReceipt](#web3ethgettransactionreceipt)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.getTransactionCount](#web3ethgettransactioncount)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.sendTransaction](#web3ethsendtransaction)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.sendRawTransaction](#web3ethsendrawtransaction)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.sign](#web3ethsign)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.contract](#web3ethcontract)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
-    - [web3.eth.compile.solidity](#web3ethcompilesolidity)
-        - [Parameters](#parameters)
-        - [Returns](#returns)
-        - [Example](#example)
+        - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
+    - [常用接口](#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3)
+        - [web3.version.network](#web3versionnetwork)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.version.ethereum](#web3versionethereum)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.version.whisper](#web3versionwhisper)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.isConnected](#web3isconnected)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.setProvider](#web3setprovider)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.currentProvider](#web3currentprovider)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.reset](#web3reset)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getBalance](#web3ethgetbalance)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getStorageAt](#web3ethgetstorageat)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getCode](#web3ethgetcode)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getBlock](#web3ethgetblock)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getBlockTransactionCount](#web3ethgetblocktransactioncount)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getUncle](#web3ethgetuncle)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getTransaction](#web3ethgettransaction)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getTransactionFromBlock](#web3ethgettransactionfromblock)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getTransactionReceipt](#web3ethgettransactionreceipt)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.getTransactionCount](#web3ethgettransactioncount)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.sendTransaction](#web3ethsendtransaction)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.sendRawTransaction](#web3ethsendrawtransaction)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.sign](#web3ethsign)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.contract](#web3ethcontract)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
+        - [web3.eth.compile.solidity](#web3ethcompilesolidity)
+            - [Parameters](#parameters)
+            - [Returns](#returns)
+            - [Example](#example)
 
 <!-- /TOC -->
 
@@ -103,7 +104,7 @@
 web3.net.getPeerCount()
 ```
 
-## 异步调用
+### 异步调用
 
 ```js
 web3.net.getPeerCount(function(error, result){
@@ -116,18 +117,20 @@ web3.net.getPeerCount(function(error, result){
 
 ![Alt text](../../img/MetaMask/async_call.png)
 
-## web3.version.network
+## 常用接口
+
+### web3.version.network
 
     web3.version.network
     // or async
     web3.version.getNetwork(callback(error, result){ ... })
 
 
-### Returns
+#### Returns
 
 `String` - The network protocol version.
 
-### Example
+#### Example
 
 ```js
 var version = web3.version.network;
@@ -136,18 +139,18 @@ console.log(version); // 54
 
 ***
 
-## web3.version.ethereum
+### web3.version.ethereum
 
     web3.version.ethereum
     // or async
     web3.version.getEthereum(callback(error, result){ ... })
 
 
-### Returns
+#### Returns
 
 `String` - The ethereum protocol version.
 
-### Example
+#### Example
 
 ```js
 var version = web3.version.ethereum;
@@ -156,18 +159,18 @@ console.log(version); // 60
 
 ***
 
-## web3.version.whisper
+### web3.version.whisper
 
     web3.version.whisper
     // or async
     web3.version.getWhisper(callback(error, result){ ... })
 
 
-### Returns
+#### Returns
 
 `String` - The whisper protocol version.
 
-### Example
+#### Example
 
 ```js
 var version = web3.version.whisper;
@@ -176,20 +179,20 @@ console.log(version); // 20
 
 ***
 
-## web3.isConnected
+### web3.isConnected
 
     web3.isConnected()
 
 Should be called to check if a connection to a node exists
 
-### Parameters
+#### Parameters
 none
 
-### Returns
+#### Returns
 
 `Boolean`
 
-### Example
+#### Example
 
 ```js
 if(!web3.isConnected()) {
@@ -205,20 +208,20 @@ if(!web3.isConnected()) {
 
 ***
 
-## web3.setProvider
+### web3.setProvider
 
     web3.setProvider(provider)
 
 Should be called to set provider.
 
-### Parameters
+#### Parameters
 none
 
-### Returns
+#### Returns
 
 `undefined`
 
-### Example
+#### Example
 
 ```js
 web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545')); // 8080 for cpp/AZ, 8545 for go/mist
@@ -226,18 +229,18 @@ web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545')); // 8
 
 ***
 
-## web3.currentProvider
+### web3.currentProvider
 
     web3.currentProvider
 
 Will contain the current provider, if one is set. This can be used to check if mist etc. has set already a provider.
 
 
-### Returns
+#### Returns
 
 `Object` - The provider set or `null`;
 
-### Example
+#### Example
 
 ```js
 // Check if mist etc. already set a provider
@@ -248,21 +251,21 @@ if(!web3.currentProvider)
 
 ***
 
-## web3.reset
+### web3.reset
 
     web3.reset(keepIsSyncing)
 
 Should be called to reset state of web3. Resets everything except manager. Uninstalls all filters. Stops polling.
 
-### Parameters
+#### Parameters
 
 1. `Boolean` - If `true` it will uninstall all filters, but will keep the [web3.eth.isSyncing()](#web3ethissyncing) polls
 
-### Returns
+#### Returns
 
 `undefined`
 
-### Example
+#### Example
 
 ```js
 web3.reset();
@@ -270,25 +273,25 @@ web3.reset();
 
 ***
 
-## web3.eth.getBalance
+### web3.eth.getBalance
 
     web3.eth.getBalance(addressHexString [, defaultBlock] [, callback])
 
 Get the balance of an address at a given block.
 
-### Parameters
+#### Parameters
 
 1. `String` - The address to get the balance of.
 2. `Number|String` - (optional) If you pass this parameter it will not use the default block set with [web3.eth.defaultBlock](#web3ethdefaultblock).
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `String` - A BigNumber instance of the current balance for the given address in wei.
 
 See the [note on BigNumber](#a-note-on-big-numbers-in-web3js).
 
-### Example
+#### Example
 
 ```js
 var balance = web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1");
@@ -299,7 +302,7 @@ console.log(balance.toNumber()); // 1000000000000
 
 ***
 
-## web3.eth.getStorageAt
+### web3.eth.getStorageAt
 
     web3.eth.getStorageAt(addressHexString, position [, defaultBlock] [, callback])
 
@@ -339,7 +342,7 @@ function(err, result){
 
 ***
 
-### Parameters
+#### Parameters
 
 1. `String` - The address to get the storage from.
 2. `Number` - The index position of the storage.
@@ -347,11 +350,11 @@ function(err, result){
 4. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
 
-### Returns
+#### Returns
 
 `String` - The value in storage at the given position.
 
-### Example
+#### Example
 
 ```js
 var state = web3.eth.getStorageAt("0x407d73d8a49eeb85d32cf465507dd71d507100c1", 0);
@@ -360,23 +363,23 @@ console.log(state); // "0x03"
 
 ***
 
-## web3.eth.getCode
+### web3.eth.getCode
 
     web3.eth.getCode(addressHexString [, defaultBlock] [, callback])
 
 Get the code at a specific address.
 
-### Parameters
+#### Parameters
 
 1. `String` - The address to get the code from.
 2. `Number|String` - (optional) If you pass this parameter it will not use the default block set with [web3.eth.defaultBlock](#web3ethdefaultblock).
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `String` - The data at given address `addressHexString`.
 
-### Example
+#### Example
 
 ```js
 var code = web3.eth.getCode("0xd5677cf67b5aa051bb40496e68ad359eb97cfbf8");
@@ -385,19 +388,19 @@ console.log(code); // "0x600160008035811a818181146012578301005b601b6001356025565
 
 ***
 
-## web3.eth.getBlock
+### web3.eth.getBlock
 
      web3.eth.getBlock(blockHashOrBlockNumber [, returnTransactionObjects] [, callback])
 
 Returns a block matching the block number or block hash.
 
-### Parameters
+#### Parameters
 
 1. `String|Number` - The block number or hash. Or the string `"earliest"`, `"latest"` or `"pending"` as in the [default block parameter](#web3ethdefaultblock).
 2. `Boolean` - (optional, default `false`) If `true`, the returned block will contain all transactions as objects, if `false` it will only contains the transaction hashes.
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Object` - The block object:
 
@@ -420,7 +423,7 @@ Returns a block matching the block number or block hash.
   - `transactions`: `Array` - Array of transaction objects, or 32 Bytes transaction hashes depending on the last given parameter.
   - `uncles`: `Array` - Array of uncle hashes.
 
-### Example
+#### Example
 
 ```js
 var info = web3.eth.getBlock(3150);
@@ -453,22 +456,22 @@ console.log(info);
 
 ***
 
-## web3.eth.getBlockTransactionCount
+### web3.eth.getBlockTransactionCount
 
     web3.eth.getBlockTransactionCount(hashStringOrBlockNumber [, callback])
 
 Returns the number of transaction in a given block.
 
-### Parameters
+#### Parameters
 
 1. `String|Number` - The block number or hash. Or the string `"earliest"`, `"latest"` or `"pending"` as in the [default block parameter](#web3ethdefaultblock).
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Number` - The number of transactions in the given block.
 
-### Example
+#### Example
 
 ```js
 var number = web3.eth.getBlockTransactionCount("0x407d73d8a49eeb85d32cf465507dd71d507100c1");
@@ -477,13 +480,13 @@ console.log(number); // 1
 
 ***
 
-## web3.eth.getUncle
+### web3.eth.getUncle
 
     web3.eth.getUncle(blockHashStringOrNumber, uncleNumber [, returnTransactionObjects] [, callback])
 
 Returns a blocks uncle by a given uncle index position.
 
-### Parameters
+#### Parameters
 
 1. `String|Number` - The block number or hash. Or the string `"earliest"`, `"latest"` or `"pending"` as in the [default block parameter](#web3ethdefaultblock).
 2. `Number` - The index position of the uncle.
@@ -491,13 +494,13 @@ Returns a blocks uncle by a given uncle index position.
 4. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
 
-### Returns
+#### Returns
 
 `Object` - the returned uncle. For a return value see [web3.eth.getBlock()](#web3ethgetblock).
 
 **Note**: An uncle doesn't contain individual transactions.
 
-### Example
+#### Example
 
 ```js
 var uncle = web3.eth.getUncle(500, 0);
@@ -508,18 +511,18 @@ console.log(uncle); // see web3.eth.getBlock
 ***
 
 
-## web3.eth.getTransaction
+### web3.eth.getTransaction
 
     web3.eth.getTransaction(transactionHash [, callback])
 
 Returns a transaction matching the given transaction hash.
 
-### Parameters
+#### Parameters
 
 1. `String` - The transaction hash.
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Object` - A transaction object its hash `transactionHash`:
 
@@ -535,7 +538,7 @@ Returns a transaction matching the given transaction hash.
 - `gas`: `Number` - gas provided by the sender.
 - `input`: `String` - the data sent along with the transaction.
 
-### Example
+#### Example
 
 ```js
 var transaction = web3.eth.getTransaction('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b');
@@ -560,24 +563,24 @@ console.log(transaction);
 
 ***
 
-## web3.eth.getTransactionFromBlock
+### web3.eth.getTransactionFromBlock
 
     getTransactionFromBlock(hashStringOrNumber, indexNumber [, callback])
 
 Returns a transaction based on a block hash or number and the transactions index position.
 
-### Parameters
+#### Parameters
 
 1. `String` - A block number or hash. Or the string `"earliest"`, `"latest"` or `"pending"` as in the [default block parameter](#web3ethdefaultblock).
 2. `Number` - The transactions index position.
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Object` - A transaction object, see [web3.eth.getTransaction](#web3ethgettransaction):
 
 
-### Example
+#### Example
 
 ```js
 var transaction = web3.eth.getTransactionFromBlock('0x4534534534', 2);
@@ -587,7 +590,7 @@ console.log(transaction); // see web3.eth.getTransaction
 
 ***
 
-## web3.eth.getTransactionReceipt
+### web3.eth.getTransactionReceipt
 
     web3.eth.getTransactionReceipt(hashString [, callback])
 
@@ -596,12 +599,12 @@ Returns the receipt of a transaction by transaction hash.
 **Note** That the receipt is not available for pending transactions.
 
 
-### Parameters
+#### Parameters
 
 1. `String` - The transaction hash.
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Object` - A transaction receipt object, or `null` when no receipt was found:
 
@@ -617,7 +620,7 @@ Returns the receipt of a transaction by transaction hash.
   - `logs `:  `Array` - Array of log objects, which this transaction generated.
   - `status `:  `String` - '0x0' indicates transaction failure , '0x1' indicates transaction succeeded. 
 
-### Example
+#### Example
 ```js
 var receipt = web3.eth.getTransactionReceipt('0x9fc76417374aa880d4449a1f7f31ec597f00b1f6f3dd2d66f4c9c6c445836d8b');
 console.log(receipt);
@@ -638,23 +641,23 @@ console.log(receipt);
 
 ***
 
-## web3.eth.getTransactionCount
+### web3.eth.getTransactionCount
 
     web3.eth.getTransactionCount(addressHexString [, defaultBlock] [, callback])
 
 Get the numbers of transactions sent from this address.
 
-### Parameters
+#### Parameters
 
 1. `String` - The address to get the numbers of transactions from.
 2. `Number|String` - (optional) If you pass this parameter it will not use the default block set with [web3.eth.defaultBlock](#web3ethdefaultblock).
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Number` - The number of transactions sent from the given address.
 
-### Example
+#### Example
 
 ```js
 var number = web3.eth.getTransactionCount("0x407d73d8a49eeb85d32cf465507dd71d507100c1");
@@ -663,13 +666,13 @@ console.log(number); // 1
 
 ***
 
-## web3.eth.sendTransaction
+### web3.eth.sendTransaction
 
     web3.eth.sendTransaction(transactionObject [, callback])
 
 Sends a transaction to the network.
 
-### Parameters
+#### Parameters
 
 1. `Object` - The transaction object to send:
   - `from`: `String` - The address for the sending account. Uses the [web3.eth.defaultAccount](#web3ethdefaultaccount) property, if not specified.
@@ -681,13 +684,13 @@ Sends a transaction to the network.
   - `nonce`: `Number`  - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `String` - The 32 Bytes transaction hash as HEX string.
 
 If the transaction was a contract creation use [web3.eth.getTransactionReceipt()](#web3ethgettransactionreceipt) to get the contract address, after the transaction was mined.
 
-### Example
+#### Example
 
 ```js
 
@@ -702,24 +705,24 @@ web3.eth.sendTransaction({data: code}, function(err, transactionHash) {
 
 ***
 
-## web3.eth.sendRawTransaction
+### web3.eth.sendRawTransaction
 
     web3.eth.sendRawTransaction(signedTransactionData [, callback])
 
 Sends an already signed transaction. For example can be signed using: https://github.com/SilentCicero/ethereumjs-accounts
 
-### Parameters
+#### Parameters
 
 1. `String` - Signed transaction data in HEX format
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `String` - The 32 Bytes transaction hash as HEX string.
 
 If the transaction was a contract creation use [web3.eth.getTransactionReceipt()](#web3ethgettransactionreceipt) to get the contract address, after the transaction was mined.
 
-### Example
+#### Example
 
 ```js
 var Tx = require('ethereumjs-tx');
@@ -750,19 +753,19 @@ web3.eth.sendRawTransaction('0x' + serializedTx.toString('hex'), function(err, h
 
 ***
 
-## web3.eth.sign
+### web3.eth.sign
 
     web3.eth.sign(dataToSign, address, [, callback])
 
 Signs data from a specific account. This account needs to be unlocked.
 
-### Parameters
+#### Parameters
 
 1. `String` - Data to sign.
 2. `String` - Address to sign with.
 3. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `String` - The signed data.
 
@@ -775,7 +778,7 @@ v = signature[128:130]
 
 Note that if you are using `ecrecover`, `v` will be either `"00"` or `"01"`. As a result, in order to use this value, you will have to parse it to an integer and then add `27`. This will result in either a `27` or a `28`.
 
-### Example
+#### Example
 
 ```js
 var result = web3.eth.sign(
@@ -786,18 +789,18 @@ console.log(result); // "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409
 
 ***
 
-## web3.eth.contract
+### web3.eth.contract
 
     web3.eth.contract(abiArray)
 
 Creates a contract object for a solidity contract, which can be used to initiate contracts on an address.
 You can read more about events [here](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI#example-javascript-usage).
 
-### Parameters
+#### Parameters
 
 1. `Array` - ABI array with descriptions of functions and events of the contract.
 
-### Returns
+#### Returns
 
 `Object` - A contract object, which can be initiated as follows:
 
@@ -866,7 +869,7 @@ myContractInstance.transactionHash // The hash of the transaction, which created
 myContractInstance.address // undefined at start, but will be auto-filled later
 ```
 
-### Example
+#### Example
 
 ```js
 // contract abi
@@ -921,23 +924,23 @@ var filter = myContractInstance.myEvent({a: 5}, function (error, result) {
 
 ***
 
-## web3.eth.compile.solidity
+### web3.eth.compile.solidity
 
     web3.eth.compile.solidity(sourceString [, callback])
 
 Compiles solidity source code.
 
-### Parameters
+#### Parameters
 
 1. `String` - The solidity source code.
 2. `Function` - (optional) If you pass a callback the HTTP request is made asynchronous. See [this note](#using-callbacks) for details.
 
-### Returns
+#### Returns
 
 `Object` - Contract and compiler info.
 
 
-### Example
+#### Example
 
 ```js
 var source = "" + 
