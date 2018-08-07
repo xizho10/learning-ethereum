@@ -5,6 +5,9 @@
 <!-- TOC -->
 
 - [MetaMask Javascript API(Web3.js)](#metamask-javascript-apiweb3js)
+    - [使用示例](#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
+        - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
+    - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
     - [web3.version.network](#web3versionnetwork)
         - [Returns](#returns)
         - [Example](#example)
@@ -91,6 +94,27 @@
         - [Example](#example)
 
 <!-- /TOC -->
+
+## 使用示例
+
+### 同步调用
+
+```js
+web3.net.getPeerCount()
+```
+
+## 异步调用
+
+```js
+web3.net.getPeerCount(function(error, result){
+    if(!error)
+        console.log(result)
+    else
+        console.error(error);
+})
+```
+
+![Alt text](../../img/MetaMask/async_call.png)
 
 ## web3.version.network
 
