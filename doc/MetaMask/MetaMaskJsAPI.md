@@ -9,6 +9,7 @@
         - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
         - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
     - [MetaMask RPC设置](#metamask-rpc%E8%AE%BE%E7%BD%AE)
+    - [权限](#%E6%9D%83%E9%99%90)
     - [常用接口](#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3)
         - [web3.version.network](#web3versionnetwork)
             - [Returns](#returns)
@@ -121,6 +122,112 @@ web3.net.getPeerCount(function(error, result){
 ## MetaMask RPC设置
 
 ![Alt text](../../img/MetaMask/new_rpc.png)
+
+## 权限
+
+![Alt text](../../img/MetaMask/MetaMaskPermissions_1.png)
+
+```json
+"permissions": [
+    "storage",
+    "unlimitedStorage",
+    "clipboardWrite",
+    "http://localhost:8545/",
+    "https://*.infura.io/",
+    "activeTab",
+    "webRequest",
+    "*://*.eth/",
+    "*://*.test/",
+    "notifications"
+]
+```
+
+> https://github.com/MetaMask/metamask-extension/blob/1540b5e256634dbbbc01627ca45afe82329d39a9/app/manifest.json
+
+![Alt text](../../img/MetaMask/SendTransaction_1.png)
+
+![Alt text](../../img/MetaMask/SendTransaction_2.png)
+
+![Alt text](../../img/MetaMask/SendTransaction_3.png)
+
+```js
+var sendTransaction = new Method({
+        name: 'sendTransaction',
+        call: 'eth_sendTransaction',
+        params: 1,
+        inputFormatter: [formatters.inputTransactionFormatter]
+    });
+```
+
+> https://github.com/ethereum/web3.js/blob/develop/lib/web3/methods/eth.js
+
+```js
+var Method = function (options) {
+    this.name = options.name;
+    this.call = options.call;
+    this.params = options.params || 0;
+    this.inputFormatter = options.inputFormatter;
+    this.outputFormatter = options.outputFormatter;
+    this.requestManager = null;
+};
+```
+
+> https://github.com/ethereum/web3.js/blob/develop/lib/web3/method.js
+
+**chrome.notifications**
+
+描述 | 使用 chrome.notifications API 通过模板创建丰富通知，并在系统托盘中向用户显示这些通知。  |
+---------|----------|
+ 可用版本 | 从 Chrome 28 开始支持。 |
+ 权限 | "notifications"  |
+
+> https://crxdoc-zh.appspot.com/apps/notifications
+
+```js
+showTransactionNotification (txMeta) {
+
+const status = txMeta.status
+if (status === 'confirmed') {
+    this._showConfirmedTransaction(txMeta)
+} else if (status === 'failed') {
+    this._showFailedTransaction(txMeta)
+}
+}
+
+_showConfirmedTransaction (txMeta) {
+
+this._subscribeToNotificationClicked()
+
+const url = explorerLink(txMeta.hash, parseInt(txMeta.metamaskNetworkId))
+const nonce = parseInt(txMeta.txParams.nonce, 16)
+
+const title = 'Confirmed transaction'
+const message = `Transaction ${nonce} confirmed! View on EtherScan`
+this._showNotification(title, message, url)
+}
+
+_showFailedTransaction (txMeta) {
+
+const nonce = parseInt(txMeta.txParams.nonce, 16)
+const title = 'Failed transaction'
+const message = `Transaction ${nonce} failed! ${txMeta.err.message}`
+this._showNotification(title, message)
+}
+
+_showNotification (title, message, url) {
+extension.notifications.create(
+    url,
+    {
+    'type': 'basic',
+    'title': title,
+    'iconUrl': extension.extension.getURL('../../images/icon-64.png'),
+    'message': message,
+    })
+  }
+
+```
+
+> https://github.com/MetaMask/metamask-extension/blob/fed9ae0deed5853014cfc76b4314195d477f14f4/app/scripts/platforms/extension.js
 
 ## 常用接口
 
