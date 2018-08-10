@@ -2,7 +2,7 @@
 
 由于[`web3.js 1.0`](http://web3js.readthedocs.io/en/1.0/)尚未发布，因此该文档仍然以实际使用的[`web3.js 0.x.x`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3)为准。
 
-![Alt text](../../img/MetaMask/web3_1_0.png){:height="50%" width="50%"}
+![Alt text](../../img/MetaMask/web3_1_0.png)
 
 <!-- TOC -->
 
