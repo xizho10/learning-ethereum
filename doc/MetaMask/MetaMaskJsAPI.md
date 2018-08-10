@@ -7,10 +7,11 @@
 <!-- TOC -->
 
 - [MetaMask Javascript API(Web3.js)](#metamask-javascript-apiweb3js)
-    - [使用示例](#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B)
+    - [使用](#%E4%BD%BF%E7%94%A8)
         - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
         - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
-    - [MetaMask RPC设置](#metamask-rpc%E8%AE%BE%E7%BD%AE)
+    - [Detecting MetaMask](#detecting-metamask)
+    - [MetaMask RPC](#metamask-rpc)
     - [权限](#%E6%9D%83%E9%99%90)
     - [常用接口](#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3)
         - [web3.version.network](#web3versionnetwork)
@@ -100,7 +101,7 @@
 
 <!-- /TOC -->
 
-## 使用示例
+## 使用
 
 ### 同步调用
 
@@ -121,7 +122,35 @@ web3.net.getPeerCount(function(error, result){
 
 ![Alt text](../../img/MetaMask/async_call.png)
 
-## MetaMask RPC设置
+## Detecting MetaMask
+
+Metamask/Mist currently inject their interface into page as global `web3` object.
+
+```js
+window.addEventListener('load', function() {
+
+  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+  if (typeof web3 !== 'undefined') {
+
+    // Use the browser's ethereum provider
+    var provider = web3.currentProvider
+
+  } else {
+    console.log('No web3? You should consider trying MetaMask!')
+  }
+
+})
+```
+
+The `provider` object is a low-level object with just one supported method: `provider.sendAsync(options, callback)`.
+
+The `options` object has several useful fields: `method` (the method name), `from` (the sender address), `params` (an array of parameters to send to that method).
+
+These methods all correspond directly to the options in [the RPC provider spec](https://github.com/ethereum/wiki/wiki/JSON-RPC).
+
+To see if the injected provider is from MetaMask, you can check `web3.currentProvider.isMetaMask`.
+
+## MetaMask RPC
 
 ![Alt text](../../img/MetaMask/new_rpc.png)
 
@@ -176,6 +205,8 @@ var Method = function (options) {
 
 > https://github.com/ethereum/web3.js/blob/develop/lib/web3/method.js
 
+***
+
 **chrome.notifications**
 
 | 描述 | 使用 chrome.notifications API 通过模板创建丰富通知，并在系统托盘中向用户显示这些通知  |
@@ -184,6 +215,8 @@ var Method = function (options) {
 | 权限 | "notifications"  |
 
 > https://crxdoc-zh.appspot.com/apps/notifications
+
+***
 
 ```js
 showTransactionNotification (txMeta) {
