@@ -1,6 +1,8 @@
 # MetaMask Javascript API(Web3.js)
 
-> 资料来源：https://github.com/ethereum/wiki/wiki/JavaScript-API#web3
+由于[`web3.js 1.0`](http://web3js.readthedocs.io/en/1.0/)尚未发布，因此该文档仍然以实际使用的[`web3.js 0.x.x`](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3)为准。
+
+![Alt text](../../img/MetaMask/web3_1_0.png)
 
 <!-- TOC -->
 
@@ -176,10 +178,10 @@ var Method = function (options) {
 
 **chrome.notifications**
 
-描述 | 使用 chrome.notifications API 通过模板创建丰富通知，并在系统托盘中向用户显示这些通知。  |
----------|----------|
- 可用版本 | 从 Chrome 28 开始支持。 |
- 权限 | "notifications"  |
+| 描述 | 使用 chrome.notifications API 通过模板创建丰富通知，并在系统托盘中向用户显示这些通知  |
+| ---------|----------|
+| 可用版本 | 从 Chrome 28 开始支持 |
+| 权限 | "notifications"  |
 
 > https://crxdoc-zh.appspot.com/apps/notifications
 
