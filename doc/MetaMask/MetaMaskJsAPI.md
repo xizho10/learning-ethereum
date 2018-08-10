@@ -11,7 +11,8 @@
         - [同步调用](#%E5%90%8C%E6%AD%A5%E8%B0%83%E7%94%A8)
         - [异步调用](#%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8)
     - [Detecting MetaMask](#detecting-metamask)
-    - [MetaMask RPC](#metamask-rpc)
+    - [Batch requests](#batch-requests)
+    - [MetaMask RPC Settings](#metamask-rpc-settings)
     - [权限](#%E6%9D%83%E9%99%90)
     - [常用接口](#%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3)
         - [web3.version.network](#web3versionnetwork)
@@ -150,7 +151,20 @@ These methods all correspond directly to the options in [the RPC provider spec](
 
 To see if the injected provider is from MetaMask, you can check `web3.currentProvider.isMetaMask`.
 
-## MetaMask RPC
+## Batch requests
+
+Batch requests allow queuing up requests and processing them at once.
+
+Note Batch requests are not faster! In fact making many requests at once will in some cases be faster, as requests are processed asynchronously. Batch requests are mainly useful to ensure the serial processing of requests.
+
+```js
+var batch = web3.createBatch();
+batch.add(web3.eth.getBalance.request('0x0000000000000000000000000000000000000000', 'latest', callback));
+batch.add(web3.eth.contract(abi).at(address).balance.request(address, callback2));
+batch.execute();
+```
+
+## MetaMask RPC Settings
 
 ![Alt text](../../img/MetaMask/new_rpc.png)
 
