@@ -127,7 +127,151 @@ getApi () {
 
 
 ```
+
 > https://github.com/MetaMask/metamask-extension/blob/master/app/scripts/metamask-controller.js#L352
+
+### Identity Management (signature operations)
+
+```js
+// eth_sign methods:
+
+/**
+* Called when a Dapp uses the eth_sign method, to request user approval.
+* eth_sign is a pure signature of arbitrary data. It is on a deprecation
+* path, since this data can be a transaction, or can leak private key
+* information.
+*
+* @param {Object} msgParams - The params passed to eth_sign.
+* @param {Function} cb = The callback function called with the signature.
+*/
+newUnsignedMessage (msgParams, cb) {
+const msgId = this.messageManager.addUnapprovedMessage(msgParams)
+this.sendUpdate()
+this.opts.showUnconfirmedMessage()
+this.messageManager.once(`${msgId}:finished`, (data) => {
+    switch (data.status) {
+    case 'signed':
+        return cb(null, data.rawSig)
+    case 'rejected':
+        return cb(cleanErrorStack(new Error('MetaMask Message Signature: User denied message signature.')))
+    default:
+        return cb(cleanErrorStack(new Error(`MetaMask Message Signature: Unknown problem: ${JSON.stringify(msgParams)}`)))
+    }
+})
+}
+
+/**
+* Signifies user intent to complete an eth_sign method.
+*
+* @param  {Object} msgParams The params passed to eth_call.
+* @returns {Promise<Object>} Full state update.
+*/
+signMessage (msgParams) {
+log.info('MetaMaskController - signMessage')
+const msgId = msgParams.metamaskId
+
+// sets the status op the message to 'approved'
+// and removes the metamaskId for signing
+return this.messageManager.approveMessage(msgParams)
+.then((cleanMsgParams) => {
+    // signs the message
+    return this.keyringController.signMessage(cleanMsgParams)
+})
+.then((rawSig) => {
+    // tells the listener that the message has been signed
+    // and can be returned to the dapp
+    this.messageManager.setMsgStatusSigned(msgId, rawSig)
+    return this.getState()
+})
+}
+
+/**
+* Used to cancel a message submitted via eth_sign.
+*
+* @param {string} msgId - The id of the message to cancel.
+*/
+cancelMessage (msgId, cb) {
+const messageManager = this.messageManager
+messageManager.rejectMsg(msgId)
+if (cb && typeof cb === 'function') {
+    cb(null, this.getState())
+}
+}
+```
+
+### personal_sign methods
+
+```js
+/**
+* Called when a dapp uses the personal_sign method.
+* This is identical to the Geth eth_sign method, and may eventually replace
+* eth_sign.
+*
+* We currently define our eth_sign and personal_sign mostly for legacy Dapps.
+*
+* @param {Object} msgParams - The params of the message to sign & return to the Dapp.
+* @param {Function} cb - The callback function called with the signature.
+* Passed back to the requesting Dapp.
+*/
+newUnsignedPersonalMessage (msgParams, cb) {
+if (!msgParams.from) {
+    return cb(cleanErrorStack(new Error('MetaMask Message Signature: from field is required.')))
+}
+
+const msgId = this.personalMessageManager.addUnapprovedMessage(msgParams)
+this.sendUpdate()
+this.opts.showUnconfirmedMessage()
+this.personalMessageManager.once(`${msgId}:finished`, (data) => {
+    switch (data.status) {
+    case 'signed':
+        return cb(null, data.rawSig)
+    case 'rejected':
+        return cb(cleanErrorStack(new Error('MetaMask Message Signature: User denied message signature.')))
+    default:
+        return cb(cleanErrorStack(new Error(`MetaMask Message Signature: Unknown problem: ${JSON.stringify(msgParams)}`)))
+    }
+})
+}
+
+/**
+* Signifies a user's approval to sign a personal_sign message in queue.
+* Triggers signing, and the callback function from newUnsignedPersonalMessage.
+*
+* @param {Object} msgParams - The params of the message to sign & return to the Dapp.
+* @returns {Promise<Object>} - A full state update.
+*/
+signPersonalMessage (msgParams) {
+log.info('MetaMaskController - signPersonalMessage')
+const msgId = msgParams.metamaskId
+// sets the status op the message to 'approved'
+// and removes the metamaskId for signing
+return this.personalMessageManager.approveMessage(msgParams)
+.then((cleanMsgParams) => {
+    // signs the message
+    return this.keyringController.signPersonalMessage(cleanMsgParams)
+})
+.then((rawSig) => {
+    // tells the listener that the message has been signed
+    // and can be returned to the dapp
+    this.personalMessageManager.setMsgStatusSigned(msgId, rawSig)
+    return this.getState()
+})
+}
+
+/**
+* Used to cancel a personal_sign type message.
+* @param {string} msgId - The ID of the message to cancel.
+* @param {Function} cb - The callback function called with a full state update.
+*/
+cancelPersonalMessage (msgId, cb) {
+const messageManager = this.personalMessageManager
+messageManager.rejectMsg(msgId)
+if (cb && typeof cb === 'function') {
+    cb(null, this.getState())
+}
+}
+
+```
 
 ### stream-handbook
 
